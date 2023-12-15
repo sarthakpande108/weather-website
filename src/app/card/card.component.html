@@ -1,0 +1,48 @@
+<div *ngIf="errorMessage; else currentData">
+    
+    <p class="error-message">{{ errorMessage }}</p>
+  </div>
+<div  class="container">
+    <h2 class="city">{{this.currentData.name}}</h2>
+    <h2 class="time">{{this.day}},{{this.date}}</h2>
+<section *ngIf="currentData" class="currentweather header">
+    <div class="currentweather-1">
+        <p>Temp:{{this.currentData.main.temp}}°C</p>
+        <p id="max-temp">Max-temp:{{this.currentData.main.temp_max}}°C</p>
+    </div>
+    <div class="currentweather-2">
+        <p id="currentdis">{{this.currentData.weather[0].description}}</p>
+        <img id="currentimg" src="https://openweathermap.org/img/wn/{{this.currentData.weather[0].icon}}@2x.png" width="70px" height="70px" style="margin-left:10px"/>
+</div>
+    </section>
+
+<section *ngIf="hourlyData" class="hourly-weather">
+        <p id="hourly">Hour</p>
+        <div class="hourly-Forcast">
+            <p>{{this.hourlyData.list[0].dt_txt|date: 'HH:mm'}}</p>
+            <p>{{this.hourlyData.list[1].dt_txt|date: 'HH:mm'}}</p>
+            <p>{{this.hourlyData.list[2].dt_txt|date: 'HH:mm'}}</p>
+        </div>
+        <div class="hourly-temprature">
+            <p>{{this.hourlyData.list[0].main.temp}}°C</p>
+            <p>{{this.hourlyData.list[1].main.temp}}°C</p>
+            <p>{{this.hourlyData.list[2].main.temp}}°C</p>
+        </div>
+</section>
+
+<section  *ngIf="dailyData" class="daily">
+        <p id="daily-heading">Daily</p>
+        <div class="daily-temp">
+          <p>{{this.dailyData.data[0].temp}}°C</p>
+          <p>{{this.dailyData.data[1].temp}}°C</p>
+          <p>{{this.dailyData.data[2].temp}}°C</p>
+          
+        </div>
+        <div class="Dates">
+            <p>{{this.dailyData.data[0].datetime}}</p>
+            <p>{{this.dailyData.data[1].datetime}}</p>
+            <p>{{this.dailyData.data[2].datetime}}</p>
+           
+        </div>
+
+</section>

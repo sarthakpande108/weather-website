@@ -1,0 +1,141 @@
+.container{
+    padding: 10px;
+    margin: 5% auto;
+    border-radius: 10px;
+    font-family: "Poppins";
+    background-color: #092635;
+    box-shadow: 10px 10px 1px #9EC8B9;
+    
+}
+.time{
+    color: #fff;
+    margin-left: 40px;
+}
+.city{
+    font-size: 2em;
+    margin: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #fff;
+
+}
+
+#max-temp{
+    margin-top: 50px;
+}
+.currentweather{
+    background-color:#5C8374;
+    width: 400px;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin:20px auto;
+    display: flex;
+    justify-content: space-around;
+    font-weight:600;
+    margin-bottom:15px;
+    padding: auto;
+}
+
+#current{
+     font-size: 1.5rem;
+    margin: 10px;
+
+}
+.hourly-weather{
+padding: auto;
+ display: flex;
+ flex-direction: column;
+ background-color: #DEECFF;
+ margin: 20px auto;
+ border-radius: 10px;
+ font-weight:600;
+ width: 400px;
+
+}
+#hourly,#daily-heading{
+    font-size: 1.5rem;
+    margin: 10px;
+
+}
+.hourly-Forcast{
+    display: flex;
+    justify-content: space-around;
+}
+.hourly-temprature{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.daily{
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #5C8374;
+    border-radius:10px;
+    margin: 20px auto;
+    font-weight:600;
+    width: 400px;
+    color: #fff;
+}
+
+
+.daily-temp{
+    display: flex;
+    justify-content: space-around;
+}
+.Dates{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.error-message{
+    background-color: #c63d3d;
+    color: white;
+    padding: 10px;
+    border: 1px solid #f24848;
+    border-radius: 4px;
+    width: 400px;
+    height: 40px;
+    margin: 2% auto;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+  
+  /* Media queries for responsive design */
+  @media screen and (max-width: 600px) {
+    /* Adjust styles for devices with a minimum width of 600px (small tablets and larger) */
+    .container {
+      width: 100%;
+    }
+    .daily,.currentweather,.hourly-weather{
+        width: 300px;
+    }
+    
+    .error-message{
+        background-color: #ef233c;
+        padding: 10px;
+        border: 1px solid #f24848;
+        border-radius: 4px;
+        width: 150px;
+        height: auto;
+        margin: 2% auto;
+        font-weight: 600;
+    }
+
+    .time{
+        color: #fff;
+        text-align: center;
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    /* Adjust styles for devices with a minimum width of 900px (large tablets and larger) */
+    .container {
+      width: 450px;
+    }
+  }
+  
+  

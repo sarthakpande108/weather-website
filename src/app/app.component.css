@@ -1,0 +1,12 @@
+h1{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 3em;
+    color: #fff;
+    }
+div{
+    background-color: #092635;
+    margin-bottom: 20px;
+    padding:10px;
+    width: 100%;
+}
